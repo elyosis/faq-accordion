@@ -8,7 +8,8 @@
   --color-background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   --color-dividers: hsl(240, 5%, 91%);
 
-  --font-size: 12px;
+  --font-size-question: 14px;
+  --font-size-answer: 12px;
   --font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -16,13 +17,83 @@
   box-sizing: border-box;
 }
 
+/* html {
+  height: 100%;
+} */
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background: var(--color-background);
+  /* min-height: 1200px; */
+  min-height: 100dvh;
+  background: var(--color-background) no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--font-family);
+}
+
+h1 {
+  color: var(--color-text-accent);
+  text-align: center;
+}
+
+details {
+  padding-block: 1rem;
+  font-size: var(--font-size-answer);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-dividers);
+  color: var(--color-text-answer);
+  cursor: pointer;
+}
+
+summary {
+  list-style: none;
+  color: var(--color-text-question);
+  font-size: var(--font-size-question);
+  display: flex;
+  justify-content: space-between;
+}
+
+details[open] summary {
+  color: var(--color-text-accent);
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+details[open] .arrow {
+  rotate: z 180deg;
+}
+
+.container {
+  background-color: white;
+  border-radius: 25px;
+  width: 87%;
+  box-shadow: 0 20px 70px -20px;
+  /* position: absolute;
+  top: 20%; */
+}
+
+.images {
+  position: relative;
+  text-align: center;
+}
+
+.image {
+  max-width: 240px;
+}
+
+.image--main {
+  position: absolute;
+  top: -100%;
+}
+
+.image--box {
+  display: none;
+}
+
+.accordion_faq {
+  padding: 0 1.5rem 3rem 1.5rem;
+  overflow-y: visible;
 }
