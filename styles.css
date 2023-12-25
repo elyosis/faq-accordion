@@ -51,6 +51,10 @@ summary {
   justify-content: space-between;
 }
 
+summary:hover {
+  color: var(--color-text-accent-hover);
+}
+
 details[open] summary {
   color: var(--color-text-accent);
   font-weight: bold;
@@ -143,6 +147,17 @@ details[open] .arrow {
     z-index: 2;
     display: block;
     max-width: 200px;
+    transition: translate 300ms ease-in-out;
+  }
+
+  .image--box.moved{
+    translate: -20%;
+  }
+
+  @media (prefers-reduced-motion) {
+    .image--box.moved{
+      translate: 0;
+    }  
   }
 
   .accordion {
