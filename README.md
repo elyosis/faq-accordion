@@ -2,6 +2,8 @@
 
 This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). It uses the native `details` and `summary` HTML elements rather than JavaScript to achieve the accordion functionality. JavaScript is only used to animate one of the images when hovering over the questions.
 
+The live version can be visited [here](https://faq-accordion-elyosis.netlify.app/).
+
 ## Overview
 
 ### The challenge
